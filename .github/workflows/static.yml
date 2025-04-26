@@ -41,6 +41,9 @@ jobs:
       - name: Run NPM Install
         run: npm install
 
+      - name: Install TailwindCSS
+        run: npm install tailwindcss
+
       - name: Run the static build step
         run: npx @devdojo/static build
 
