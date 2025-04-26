@@ -4,11 +4,7 @@
     "description": "FND-COM is a simple and elegant web application template built with Tailwind CSS and Alpine.js.",
     "author": "Flavius-Constantin Borlovan",
     "license": "ISC",
-    "scripts": {
-        "build": "npx @devdojo/static build"
-    },
     "dependencies": {
-        "tailwindcss": "^3.4.1",
         "@tailwindcss/typography": "^0.5.10"
     }
 }
