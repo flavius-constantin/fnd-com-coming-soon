@@ -39,7 +39,7 @@ jobs:
         uses: mikeal/npx@1.0.0
 
       - name: Run NPM Install
-        run: npm install
+        run: npm install & npm run build
 
       - name: Run the static build step
         run: npx @devdojo/static build
