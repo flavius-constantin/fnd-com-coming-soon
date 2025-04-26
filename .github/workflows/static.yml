@@ -44,6 +44,9 @@ jobs:
       - name: Run the static build step
         run: npx @devdojo/static build
 
+      - name: Verify _site directory
+        run: ls -la ./_site/
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
