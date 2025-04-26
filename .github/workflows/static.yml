@@ -30,9 +30,6 @@ jobs:
       - name: Build static site
         run: npx @devdojo/static build
 
-      - name: Verify _site directory
-        run: ls -la ./_site/
-
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
