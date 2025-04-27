@@ -35,8 +35,10 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v3
 
-      - name: GitHub Action for npx
-        uses: mikeal/npx@1.0.0
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
 
       - name: Install TailwindCSS & CLI
         run: npm install tailwindcss @tailwindcss/cli
