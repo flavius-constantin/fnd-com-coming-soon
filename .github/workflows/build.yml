@@ -38,20 +38,17 @@ jobs:
       - name: GitHub Action for npx
         uses: mikeal/npx@1.0.0
 
-      - name: Run NPM Install
-        run: npm install
+      - name: Install TailwindCSS & CLI
+        run: npm install tailwindcss @tailwindcss/cli
 
-      - name: Run the static build step
-        run: npx @devdojo/static build
-
-      - name: Verify _site directory
-        run: ls -la ./_site/
+      - name: Run the minify process
+        run: npx @tailwindcss/cli -i ./src/input.css -o ./public/assets/css.css --minify
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           # Upload entire repository
-          path: './_site/'
+          path: './public/'
 
       - name: Deploy to GitHub Pages
         id: deployment
