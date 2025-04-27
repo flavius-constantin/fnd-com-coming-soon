@@ -41,10 +41,13 @@ jobs:
           node-version: '20'
 
       - name: Install TailwindCSS & CLI
-        run: npm install tailwindcss @tailwindcss/cli
+        run: npm install tailwindcss @tailwindcss/cli esbuild
 
-      - name: Run the minify process
+      - name: Minify CSS
         run: npx @tailwindcss/cli -i ./src/input.css -o ./public/assets/css.css --minify
+
+      - name: Minify JavaScript
+        run: npx esbuild ./src/input.js --bundle --minify --outfile=./public/assets/main.js
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

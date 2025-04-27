@@ -1,11 +1,15 @@
 {
-    "name": "FND COM",
+    "name": "fnd-com",
     "version": "1.0.0",
     "description": "FND-COM is a simple and elegant web application template built with Tailwind CSS and Alpine.js.",
     "author": "Flavius-Constantin Borlovan",
     "license": "ISC",
+    "scripts": {
+        "build": "esbuild src/input.js --bundle --minify --outfile=public/assets/main.js && tailwindcss -i ./src/input.css -o ./public/assets/css.css --minify"
+    },
     "dependencies": {
         "@tailwindcss/cli": "^4.1.4",
+        "esbuild": "^0.25.3",
         "tailwindcss": "^4.1.4"
     }
 }
