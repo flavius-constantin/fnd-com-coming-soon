@@ -1,6 +1,6 @@
 {
-  "name": "FND-CON",
-  "short_name": "FND-CON",
+  "name": "FiberNet Dynamics Communication",
+  "short_name": "FND-COM",
   "icons": [
     {
       "src": "/favicon/web-app-manifest-192x192.png",
